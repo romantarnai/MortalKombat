@@ -1,0 +1,155 @@
+/*  ===============
+     global styles
+    =============== */
+body{
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+/*  ===============
+        navbar
+    =============== */
+.navbar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 2em;
+    left: 0;
+    right: 0;
+}
+.navbar > h2{
+    margin-left: 3em;
+    font-size: 2rem;
+    color: white;
+}
+.navbar > ul{
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    margin-right: 5em;
+}
+.link{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+.link::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: -4px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 0%;
+    transition: width 0.25s linear;
+}
+.link:hover::after{
+    width: 100%;
+}
+
+/*  ===============
+         main
+    =============== */
+.bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    transform: scale(1.1);  /* to get rid of edges from blur*/
+    z-index: -5;
+    background-position: center;
+}
+
+.scorp{
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    max-height: 55%;
+}
+.sub{
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    max-height: 65%;
+}
+.textbox{
+    position: absolute;
+    padding: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+    line-height: 1.3rem;
+    color: white;
+    bottom: 35%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%);
+    max-width: 25em;
+    text-align: center;
+}
+.textbox > h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.textbox > p:first-of-type{
+    font-size: 1.5rem;
+}
+
+/* changing sizes */
+@media only screen and (max-width: 1280px){
+    .scorp{
+        max-height: 40%;
+    }
+    .sub{
+        max-height: 50%;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .scorp{
+        max-height: 30%;
+    }
+    .sub{
+        max-height: 40%;
+    }
+
+    .textbox{
+        min-width: 20em;
+    }
+    .textbox > h1
+    {
+        font-size: 2.5rem;
+    }
+    .textbox > p:first-of-type{
+        font-size: 1.2rem;
+    }
+    .textbox > p:last-of-type{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 800px){
+    .scorp{
+        max-height: 25%;
+    }
+    .sub{
+        max-height: 35%;
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar > h2{
+        margin-left: 0;
+    }
+    .navbar > ul{
+        margin-right: 0;
+        padding-left: 0;
+    }
+}
