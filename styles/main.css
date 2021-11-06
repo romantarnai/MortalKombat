@@ -101,23 +101,20 @@ body{
 .textbox > p:first-of-type{
     font-size: 1.5rem;
 }
-.textbox > button{
+.textbox button{
     background: none;
     border: 2px solid white;
     border-radius: 5px;
     padding: 15px;
-}
-.textbox > button a{
+
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1rem;
 }
-
-.textbox > button:hover{
+.textbox button:hover{
+    cursor: pointer;
     background-color: white;
-}
-.textbox > button:hover a{
     color: black;
 }
 
